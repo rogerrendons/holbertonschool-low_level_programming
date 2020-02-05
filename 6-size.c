@@ -1,5 +1,10 @@
-#include <stdio.h>    
-int main()
+#include <stdio.h>
+/**
+* main - Entry point
+* print size variables
+* Return: Always 0 (Success)
+*/
+int main(void)
 {
 int entero;
 char caracter;
