@@ -7,7 +7,8 @@
 int main(void)
 {
 int num;
-for (num = '0' ; num <= '9' ; num++) 
+num = '0';
+while (num <= '9')
 {
 putchar (num);
 if (num <= '8')
@@ -15,6 +16,7 @@ if (num <= '8')
 putchar (32);
 putchar (44);
 }
+num++;
 }
 putchar ('\n');
 return (0);
