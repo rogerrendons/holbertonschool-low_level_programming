@@ -8,16 +8,21 @@ int main(void)
 {
 int num;
 int dec;
-for (dec = '0'; dec <= '9'; dec++)
+int tel;
+for (dec = '0'; dec <= '7'; dec++)
 {
-for (num = '0'; num <= '9'; num++)
+for (num = 1 + dec ; num <= '8'; num++)
+{
+for (tel = 1 + num ; tel <= '9'; tel++)
 {
 putchar (dec);
 putchar (num);
-if (!(dec == '9' && num == '9'))
+putchar (tel);
+if (!(dec == '7' && num == '8' && tel == '9'))
 {
 putchar (',');
 putchar (' ');
+}
 }
 }
 }

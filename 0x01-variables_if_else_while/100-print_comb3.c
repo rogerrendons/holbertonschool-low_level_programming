@@ -8,13 +8,13 @@ int main(void)
 {
 int num;
 int dec;
-for (dec = '0'; dec <= '9'; dec++)
+for (dec = '0'; dec <= '8'; dec++)
 {
-for (num = '0'; num <= '9'; num++)
+for (num = dec + 1; num <= '9'; num++)
 {
 putchar (dec);
 putchar (num);
-if (!(dec == '9' && num == '9'))
+if (!(dec == '8' && num == '9'))
 {
 putchar (',');
 putchar (' ');
