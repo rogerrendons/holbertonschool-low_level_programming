@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * main - Entry point
- * putchar proyect
+ * _islower - Entry point
+ * @c: caracter to print
  * Return: Always 0 (Success)
  */
 int _islower(int c)
@@ -14,5 +14,5 @@ else
 {
 c = 0;
 }
- return (1 &c);
+return (1 & c);
 }
