@@ -1,15 +1,18 @@
 #include "holberton.h"
 /**
-* print_alphabet - Entry point
+* print_alphabet_x10 - Entry point
 * return void: Always 0 (Success)
 */
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 char car;
-Int i;
+int i;
+for (i = 0; i <= 9; i++)
+{
 for (car = 'a' ; car <= 'z' ; car++)
 {
 _putchar (car);
 }
 _putchar ('\n');
+}
 }
