@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * void more_numbers - function that prints the numbers, from 0 to 9.
+ * more_numbers - function that prints the numbers, from 0 to 9.
  * Return: Always 0.
  */
 void more_numbers(void)
