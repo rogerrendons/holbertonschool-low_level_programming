@@ -1,32 +1,23 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
- * print_number - function that prints the numbers, from 0 to 9.
+ * print_number - function that prints the number various.
  * @n: Integer for my putchar
  * Return: Always 0.
  */
 void print_number(int n)
 
 {
-	int tam;
-	int lon;
+	int num;
 
-	tam = 1;
-	while (tam <= 100000000)
+	num = n;
+	if (n < 0)
 	{
-		if ((n / tam) != 0)
-		{
-		lon = tam;
-		}
-	tam = (tam * 10);
-	printf ("%d \n" , lon);
-
+		_putchar('-');
+		num = -num;
 	}
-	while (lon >= 10)
+	if ((num / 10) > 0)
 	{
-		_putchar('0' + (n / lon));
-		lon = (lon / 10);
+		print_number(num / 10);
 	}
-	_putchar('0' + (n % 10));
-
+	_putchar((num % 10) + '0');
 }
