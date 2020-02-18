@@ -6,14 +6,12 @@
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
 	char s[10] = "Holberton";
-	char *p;
 
 	printf("%s\n", s);
-	p = rev_string(*s);
+	rev_string(s);
 	printf("%s\n", s);
 	return (0);
 }
