@@ -2,7 +2,7 @@
 /**
  * _puts - function that prints the square.
  * @str: caracters to evaluate
- * Return: i.
+ * Return: 0.
  */
 void _puts(char *str)
 {
@@ -15,5 +15,4 @@ void _puts(char *str)
 		i++;
 	}
 	_putchar('\n');
-	return;
 }
