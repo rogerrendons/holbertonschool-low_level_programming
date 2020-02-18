@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
  * rev_string - function that prints the reverse Holberton.
- * @src: string initial.
- * @dest: string copy.
+ * @s: string initial.
  * Return: 0.
  */
 char *rev_string(char *s)
