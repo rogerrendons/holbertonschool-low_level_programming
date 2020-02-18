@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_array - function that prints the reverse Holberton.
+ * _strcpy - function that prints the reverse Holberton.
  * @src: string initial.
  * @dest: string copy.
  * Return: 0.
@@ -15,6 +15,5 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = src[i];
 	return (dest);
 }
