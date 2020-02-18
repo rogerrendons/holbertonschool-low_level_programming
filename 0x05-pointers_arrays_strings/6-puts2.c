@@ -2,7 +2,7 @@
 /**
  * puts2 - function that prints the reverse Holberton.
  * @str: caracters to evaluate
- * Return: i.
+ * Return: null.
  */
 void puts2(char *str)
 {
@@ -15,5 +15,4 @@ void puts2(char *str)
 		i = i + 2;
 	}
 	_putchar('\n');
-	return;
 }
