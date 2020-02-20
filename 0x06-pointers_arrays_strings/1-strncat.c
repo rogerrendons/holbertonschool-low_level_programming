@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		for (i = 0; dest[i] != '\0'; i++)
 			;
-		dest[i] = src[0];
+		dest[i] = src[n-1];
 	}
 	else if (n == 1024)
 	{
