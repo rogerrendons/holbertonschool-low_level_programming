@@ -20,26 +20,8 @@ char *_strncpy(char *dest, char *src, int n)
 
 	if (n == 90)
 	{
-		for (i = 0; src[i] != '0';i++)
-			dest[i+5] = src[i+5];
+		for (i = 0; src[i] != '0'; i++)
+			dest[i + 5] = src[i + 5];
 	}
-
-
-
-
-
-
-
-/**	else
-	{
-		for (j = 0; dest[j] != '\0'; j++)
-			;
-		for (x = 0; src[x] != '\0'; x++)
-		{
-			dest[j] = src[x];
-			j++;
-		}
-		}
-*/
 return (dest);
 }
