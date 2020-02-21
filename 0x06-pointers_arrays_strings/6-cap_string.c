@@ -18,10 +18,9 @@ char *cap_string(char *s)
 		{
 			if (sep[x] == s[i])
 			{
-				if (s[i+1] >= 97)
+				if (s[i + 1] >= 97)
 				{
-					s[i+1] = s[i+1] - 32;
-/**					printf("i=%d, x=%d \n", i, x); */
+					s[i + 1] = s[i + 1] - 32;
 				}
 			}
 
