@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * string_toupper - Write a function that changes all lowercase letters of a string to uppercase.
+ * string_toupper - changes all lowercase letters of a string to uppercase.
  *
  * Return: Always 0.
  */
@@ -20,7 +20,7 @@ char *string_toupper(char *s)
 		}
 		else
 		{
-			s[i] = s[i]-32;
+			s[i] = s[i] - 32;
 		}
 		i++;
 	}
