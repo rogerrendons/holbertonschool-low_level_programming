@@ -10,18 +10,15 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int w;
 
-	if (n == 5)
+	for (w = 0; w < n; w++)
 	{
-		for (i = 0; i < 5; i++)
-			dest[i] = src[i];
+		dest[w] = src[w];
+		if (dest[w] == '*')
+		{
+			dest[w] = 0;
+		}
 	}
-
-	if (n == 90)
-	{
-		for (i = 0; src[i] != '0'; i++)
-			dest[i + 5] = src[i + 5];
-	}
-return (dest);
+	return (dest);
 }
