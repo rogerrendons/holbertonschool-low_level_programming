@@ -2,23 +2,26 @@
 #include <stdio.h>
 
 /**
- * cap_string - Write a function that capitalizes all words of a string.
+ * leet - Write a function that capitalizes all words of a string.
  * @s: Characters by main.c
  * Return: Always 0.
  */
 
 char *leet(char *s)
 {
-	int i;
+	int r, l = 0;
+	char let[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char num[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	i = 0;
-	while (s[i] != '\0')
+	for (r = 0; s[r] != '\0'; r++)
 	{
-		if (((s[i] == 'a') || (s[i] == 'A')) &&  ((s[i] == 'e') || (s[i] == 'E')) &&  ((s[i] == 'o') || (s[i] == 'O')) && ((s[i] == 't') || (s[i] == 'T')) &&  ((s[i] == 'l') || (s[i] == 'L')))
+		for (l = 0; let[l] != '\0'; l++)
 		{
-			
+			if (let[l] == s[r])
+			{
+				s[r] = num[l];
+			}
 		}
-		i++;
 	}
 	return (s);
 }
