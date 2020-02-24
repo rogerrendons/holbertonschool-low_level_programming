@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
  * _strspn - get leng.
  * @s: string 1.
@@ -9,9 +7,9 @@
  */
 
 unsigned int _strspn(char *s, char *accept)
-{
 
-	int i, p , x;
+{
+	int i, p, x;
 
 	i = 0;
 	while (s[i] != '\0')
