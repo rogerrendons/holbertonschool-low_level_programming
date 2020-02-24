@@ -6,26 +6,35 @@
  * @accept: for scan in the s.
  * Return: Always 0.
  */
-
 char *_strpbrk(char *s, char *accept)
-
 {
-	int rec, comp;
+	int wor, acc = 0;
 
-	rec = 0;
-	while (s[rec] != '\0')
+	while (s[wor] != '\0')
 	{
-		comp = 0;
-		while (accept[comp] != '\0')
+		while (accept[acc] != '\0')
 		{
-			if (s[rec] == accept[comp])
+			printf("%s \n", s);
+			printf("%s \n", accept);
+
+/**			if (*s == *accept)
 			{
 				printf("%s \n", s);
 				return (s);
+				break;
 			}
-			comp++;
+			accept++;
 		}
-		rec++;
+		s++;
+		if (*s == *accept)
+		{
+			printf("%s \n", s);
+			return (s);
+			break;
+		}*/
+			acc++;
+		}
+		wor++;
 	}
-	return ('\0');
+	return (s);
 }
