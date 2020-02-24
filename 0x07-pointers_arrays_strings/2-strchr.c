@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strchr - check the code for Holberton School students.
+ * _strchr - found a character and return rest.
  * @s: buffer copied of src.
  * @c: sourse data to copy.
  * Return: Always 0.
