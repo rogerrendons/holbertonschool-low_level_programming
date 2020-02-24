@@ -9,16 +9,12 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int x;
-
-	x = 0;
-	while (s[x] != c)
+	while (*s != c)
 	{
-		if (s[x] == c)
+		if (!*s++)
 		{
-			return (s + x);
+			return (0);
 		}
-		x++;
 	}
-	return (s + x - 1);
+	return (s);
 }
