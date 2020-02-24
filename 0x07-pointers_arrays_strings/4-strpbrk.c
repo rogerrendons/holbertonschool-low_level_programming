@@ -1,35 +1,31 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
- * _strspn - get leng.
+ * _strpbrk - get string to init.
  * @s: string 1.
  * @accept: for scan in the s.
  * Return: Always 0.
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 
 {
-	int rec, comp, sum;
+	int rec, comp;
 
-	sum = 0;
 	rec = 0;
-	while (s[rec] != ',')
+	while (s[rec] != '\0')
 	{
 		comp = 0;
 		while (accept[comp] != '\0')
 		{
 			if (s[rec] == accept[comp])
 			{
-				sum++;
-				break;
+				printf("%s \n", s);
+				return (s);
 			}
 			comp++;
 		}
-		if (s[rec] != accept[comp])
-		{
-			break;
-		}
 		rec++;
 	}
-	return (sum);
+	return ('\0');
 }
