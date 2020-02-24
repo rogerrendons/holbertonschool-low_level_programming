@@ -9,26 +9,22 @@
 unsigned int _strspn(char *s, char *accept)
 
 {
-	int i, p, x;
+	int rec, comp, sum;
 
-	i = 0;
-	while (s[i] != '\0')
+	sum = 0;
+	rec = 0;
+	while (s[rec] != ',')
 	{
-		i++;
-	}
-	p = 0;
-	while (s[p] != '\0')
-	{
-		x = 0;
-		while (accept[x] != '\0')
+		comp = 0;
+		while (accept[comp] != '\0')
 		{
-			if (s[p] == accept[x])
+			if (s[rec] == accept[comp])
 			{
-				i--;
+				sum++;
 			}
-			x++;
+			comp++;
 		}
-		p++;
+		rec++;
 	}
-	return (i);
+	return (sum);
 }
