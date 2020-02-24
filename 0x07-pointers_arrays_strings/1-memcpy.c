@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _memset - check the code for Holberton School students.
+ * _memcpy - check the code for Holberton School students.
  * @dest: buffer copied of src.
  * @src: sourse data to copy.
  * @n: size to print.
