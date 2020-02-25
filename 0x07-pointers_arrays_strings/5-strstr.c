@@ -2,37 +2,30 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _strstr - check the code for Holberton School students.
+ * @haystack: phrase complete
+ * @needle: wor to scan
  * Return: Always 0.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int nee, x, foun;
+	int i, j, k;
 
-	nee = 0;
-	while (needle[nee] != '\0')
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		while (haystack[x] != '\0')
+		for(j = 0, k = i; needle[j] != '\0'; j++, k++)
 		{
-			if (*needle == haystack[x])
+			if (needle[j] != haystack[k] || haystack[k] == '\0')
 			{
-				for (rec=0; needle =! '\0';rec++)
-				{
-					if needle[rec] = haystack[x];
-					{
-						foun = 1;
-					}
-					else
-					{
-						break;
-					}
-				}
+				break;
 			}
-			x++;
 		}
-		nee++;
-	}
+		if (needle[j] == '\0')
+		{
+			return (haystack + i);
+		}
 
+	}
+	return (0);
 }
