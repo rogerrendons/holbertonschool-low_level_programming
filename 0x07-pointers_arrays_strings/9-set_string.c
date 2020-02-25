@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * set_string - check the code for Holberton School students.
+ * @s: string 1
+ * @to: string 2
  * Return: Always 0.
  */
 
