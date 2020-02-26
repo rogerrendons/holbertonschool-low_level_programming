@@ -10,15 +10,26 @@
 
 void print_diagsums(int *a, int size)
 {
-	int x, y = 0;
+	int x, y, s1, s2, aux = 0;
 
-
-	y = size;
-	for (x = 0; x <= size; x++)
+	x = 0;
+	y = 0;
+	s1 = 0;
+	s2 = 0;
+	for (x = 0; x < size; x++)
 	{
-		s1 = s1 + a[x][y];
-		s2 = s2 + a[y][x];
-		y--;
+		for (y = size - 1; y >= 0; y--)
+		{
+			if ((x - y) == 0)
+			{
+				s1 = s1 + a[aux];
+			}
+			if ((x + y) == (size - 1))
+			{
+				s2 = s2 + a[aux];
+			}
+			aux++;
 		}
-	printf("%d, %d \n", s1);
+	}
+	printf("%d, %d\n", s2, s1);
 }
