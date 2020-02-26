@@ -5,15 +5,13 @@
  * @s: Pointer contents string.
  * Return: Always 0.
  */
-
-int cont;
 int _strlen_recursion(char *s)
 {
-	int cont;
+	int cont = 0;
 	if (*s == '\0')
 	{
-		return (cont);
+		return (cont++);
 	}
-	cont++;
-	_strlen_recursion(s + 1);
+	cont = (1 + _strlen_recursion(s + 1));
+	return (cont);
 }
