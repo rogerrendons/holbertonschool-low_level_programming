@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_diagrams - check the code for Holberton School students.
+ * print_diagsums - check the code for Holberton School students.
  * @a: matriz array.
  * @size: size of matriz
  * Return: Always 0.
