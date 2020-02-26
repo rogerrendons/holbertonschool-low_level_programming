@@ -8,19 +8,15 @@
 
 int factorial(int n)
 {
-	int res;
-	int cont;
 
-	res = 1;
-	cont = 1;
 	if (n < 0)
 	{
 		return (-1);
 	}
-	while (cont <= n)
+	if (n == 0)
 	{
-		res = res * cont;
-		cont++;
+		return (1);
 	}
-	return (res);
+
+	return (n * factorial(n - 1));
 }
