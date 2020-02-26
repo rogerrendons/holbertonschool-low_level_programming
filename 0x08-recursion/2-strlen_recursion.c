@@ -8,6 +8,7 @@
 int _strlen_recursion(char *s)
 {
 	int cont = 0;
+
 	if (*s == '\0')
 	{
 		return (cont++);
