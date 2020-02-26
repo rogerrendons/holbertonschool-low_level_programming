@@ -1,9 +1,8 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * factorial - check the code for Holberton School students.
+ * @n: number to evaluate to factorial.
  * Return: Always 0.
  */
 
