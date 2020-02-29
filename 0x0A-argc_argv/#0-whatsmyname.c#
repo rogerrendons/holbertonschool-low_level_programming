@@ -5,10 +5,12 @@
  * @argv: registers.
  * Return: - cero
  *
- */
+*/
 
-int main(int argc, char *argv[]__attribute__((unused)))
+
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	argc = 0;
+	printf("%s\n", argv[argc]);
 	return (0);
 }
