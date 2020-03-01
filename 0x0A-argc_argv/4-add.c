@@ -8,7 +8,7 @@
  * @argv: registers.
  * Return: - cero
  *
- */
+*/
 
 int main(int argc, char *argv[]__attribute__((unused)))
 {
@@ -21,9 +21,9 @@ int main(int argc, char *argv[]__attribute__((unused)))
 	}
 	for (lx = 1; lx < argc; lx++)
 	{
-		for (ly = 0; argv[lx][ly] !='\0'; ly++)
+		for (ly = 0; argv[lx][ly] != '\0'; ly++)
 		{
-			if (!((argv[lx][ly] >= 48) && (argv[lx][ly] <=57)))
+			if (!((argv[lx][ly] >= 48) && (argv[lx][ly] <= 57)))
 			{
 				printf("Error\n");
 				return (1);
@@ -38,26 +38,3 @@ int main(int argc, char *argv[]__attribute__((unused)))
 	printf("%d\n", sum);
 	return (0);
 }
-
-/**
-			if (atoi((argv[positive])) > 0)
-			{
-				res = res + (atoi(argv[positive]));
-
-
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-	}
-	printf("%d\n", res);
-	return (0);
-*/
