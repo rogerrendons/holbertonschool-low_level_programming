@@ -43,10 +43,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (tconc = tconc; tconc < (ts1 + ts2); tconc++)
 	{
-		concat[tconc] = s2[tconc-ts1];
+		concat[tconc] = s2[tconc - ts1];
 	}
-
-	printf("s1: %d, s2: %d, tconc: %d\n",ts1, ts2, tconc);
-
 	return (concat);
 }
