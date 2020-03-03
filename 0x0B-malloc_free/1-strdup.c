@@ -2,39 +2,37 @@
 #include <stdlib.h>
 
 /**
- * *create_array - Ceate array.
- * @size: tamaño string.
- * @c: carcter provided by main
+ * *_strdup - Ceate array.
+ * @str: string.
  * Return: char.
  */
 
 char *_strdup(char *str)
 {
 
-	char *s;
-	char *p;
+	char *copy;
 	unsigned int i, m = 0;
 
-        if (s == NULL)
-        {
+	if (str == NULL)
+	{
 		return (NULL);
 	}
 	else
 	{
-		while (s[i] != '\0')
+		i = 0;
+		while (str[i] != '\0')
 		{
 			i++;
 		}
 	}
-	p = malloc(sizeof(char) * i);
-	for (m = 0; s[m] != '\0'; m++)
+	copy = malloc(sizeof(char) * i);
+	if (copy == NULL)
 	{
-		p[m] = s[m];
+		return (NULL);
 	}
-	return (s);
-
-
-
-
-
+	for (m = 0; str[m] != '\0'; m++)
+	{
+		copy[m] = str[m];
+	}
+	return (copy);
 }
