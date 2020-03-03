@@ -25,12 +25,13 @@ char *_strdup(char *str)
 			i++;
 		}
 	}
-	copy = malloc(sizeof(char) * i);
+	i++;
+	copy = malloc (sizeof(char) * i);
 	if (copy == NULL)
 	{
 		return (NULL);
 	}
-	for (m = 0; str[m] != '\0'; m++)
+	for (m = 0; m < i; m++)
 	{
 		copy[m] = str[m];
 	}
