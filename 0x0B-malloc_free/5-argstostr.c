@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * argstostr - printer args
+ * argstostr - print arguments
  * @ac: numbers of args
  * @av: array of args
  * Return: char
@@ -10,8 +10,8 @@
 char *argstostr(int ac, char **av)
 {
 
-	char *prnargs;
-	int i, j, rec, large = 0;
+	char *clain;
+	int i = 0, j = 0, k = 0, large = 0;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -27,9 +27,9 @@ char *argstostr(int ac, char **av)
 	}
 	large = large + ac;
 
-	prnargs = malloc(large * sizeof(char) + 1);
+	clain = malloc(large * sizeof(char) + 1);
 
-	if (prnargs == NULL)
+	if (clain == NULL)
 	{
 		return (NULL);
 	}
@@ -38,13 +38,13 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
-			prnargs[rec] = av[i][j];
-			rec++;
+			clain[k] = av[i][j];
+			k++;
 		}
-		if (prnargs[rec] == '\0')
+		if (clain[k] == '\0')
 		{
-			prnargs[rec++] = '\n';
+			clain[k++] = '\n';
 		}
 	}
-	return (prnargs);
+	return (clain);
 }
