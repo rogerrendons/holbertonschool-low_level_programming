@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	unsigned int ts1, ts2, tconc = 0;
+	unsigned int ts1, ts2, tconc, tconc2 = 0;
 
 	if (s1 == NULL)
 	{
@@ -42,10 +42,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		concat[tconc] = s1[tconc];
 	}
-	for (tconc = tconc; tconc <= (ts1 + ts2); tconc++)
+	for (tconc2 = 0; tconc2 < ts2; tconc2++)
 	{
-		concat[tconc] = s2[tconc - ts1];
+		concat[tconc2 + ts1] = s2[tconc2];
 	}
-	concat[tconc] = '\0';
+	concat[ts1 + ts2] = '\0';
 	return (concat);
 }

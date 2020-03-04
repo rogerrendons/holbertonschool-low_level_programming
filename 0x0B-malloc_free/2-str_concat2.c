@@ -42,10 +42,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		concat[tconc] = s1[tconc];
 	}
-	for (tconc = tconc; tconc <= (ts1 + ts2); tconc++)
+	for (tconc = 0; tconc <= ts2; tconc++)
 	{
-		concat[tconc] = s2[tconc - ts1];
+		concat[tconc] = s2[tconc];
 	}
-	concat[tconc] = '\0';
+	concat[ts1 + ts2] = '\0';
 	return (concat);
 }
