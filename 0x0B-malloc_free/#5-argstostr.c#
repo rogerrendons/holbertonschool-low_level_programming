@@ -1,0 +1,30 @@
+#include <stdlib.h>
+/**
+ * *argstostr - concatenates
+ * @ac: var 1
+ * @av: var 2
+ * Return: int
+*/
+
+char *argstostr(int ac, char **av)
+{
+
+
+	int cont;
+	char *concat;
+
+	for (cont = 0; cont < ac; cont++)
+	{
+
+
+
+
+
+	int j;
+
+	for (j = 0; j < height; j++)
+	{
+		free(grid[j]);
+	}
+	free(grid);
+}
