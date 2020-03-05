@@ -6,14 +6,13 @@
  * *str_concat - Ceate array.
  * @s1: string 1.
  * @s2: string 2.
- * @n: long of string.
  * Return: char.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int ts1, ts2, tconc, tconc2, inc = 0;
+	unsigned int ts1, ts2, tconc, tconc2 = 0;
 
 	if (s1 == NULL)
 	{
@@ -33,18 +32,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ts2++;
 	}
-	tconc = ts1 + inc + 1;
+	-------------------
+	tconc = ts1 + ts2 + 1;
 	concat = malloc(sizeof(char) * tconc);
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-
 	for (tconc2 = 0; tconc2 < ts1; tconc2++)
 	{
 		concat[tconc2] = s1[tconc2];
 	}
-	for (tconc2 = 0; tconc2 < n; tconc2++)
+	for (tconc2 = 0; tconc2 < ts2; tconc2++)
 	{
 		concat[tconc2 + ts1] = s2[tconc2];
 	}
