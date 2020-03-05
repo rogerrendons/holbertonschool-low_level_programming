@@ -1,6 +1,6 @@
 #include "holberton.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * *string_nconcat - Ceate array.
@@ -30,8 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ts1 = 0;
 		s1 = "";
 	}
-	else
+	else if ((ts1 > 0) && (ts2 > 0))
 		ts2 = n;
+	else
+		ts2 = ts2;
 	tconc = ts1 + ts2 + 1;
 	concat = malloc(sizeof(char) * tconc);
 	if (concat == NULL)
