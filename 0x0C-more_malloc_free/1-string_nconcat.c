@@ -26,23 +26,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[ts2] != '\0')
 		ts2++;
 	if (n >= ts2)
+	{
 		ts1 = 0;
+		s1 = "";
+	}
 	else
 		ts2 = n;
 	tconc = ts1 + ts2 + 1;
 	concat = malloc(sizeof(char) * tconc);
 	if (concat == NULL)
-	{
 		return (NULL);
-	}
 	for (tconc2 = 0; tconc2 < ts1; tconc2++)
-	{
 		concat[tconc2] = s1[tconc2];
-	}
 	for (tconc2 = 0; tconc2 < ts2; tconc2++)
-	{
 		concat[tconc2 + ts1] = s2[tconc2];
-	}
 	concat[ts1 + ts2] = '\0';
 	return (concat);
 }
