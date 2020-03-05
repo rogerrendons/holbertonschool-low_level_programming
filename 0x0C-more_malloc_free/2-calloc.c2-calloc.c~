@@ -1,0 +1,15 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * *_calloc - Assing memory with calloc
+ * @nmemb: Number of memory.
+ * @size: type variable.
+ *
+ * Return: result
+ */
+
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+
