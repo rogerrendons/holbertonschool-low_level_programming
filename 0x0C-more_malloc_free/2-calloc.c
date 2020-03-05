@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	mycaloc = malloc(sizeof(size) * nmemb);
+	mycaloc = malloc(size * nmemb);
 	if (mycaloc == NULL)
 	{
 		free(mycaloc);
