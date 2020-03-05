@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
- * *str_concat - Ceate array.
+ * *string_nconcat - Ceate array.
  * @s1: string 1.
  * @s2: string 2.
+ * @n: Number.
  * Return: char.
  */
 
