@@ -1,4 +1,4 @@
 #ifndef HOLBERTON
 #define HOLBERTON
-#define SUM(y,z) (y + z)
+#define SUM(y, z) (y + z)
 #endif
