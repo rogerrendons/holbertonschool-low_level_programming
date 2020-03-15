@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - function principal
+ * print_strings - function principal
  * @separator: Separator of numbers
  * @n: numbers
  * Return: no
@@ -15,7 +15,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *verify;
 	unsigned int x;
 
-	va_start (str, n);
+	va_start(str, n);
 	if (separator == NULL)
 		return;
 	for (x = 0; x < n; x++)
@@ -28,7 +28,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			else
 			{
 				if (x != n - 1)
-					printf("nil%s",separator);
+					printf("nil%s", separator);
 				else
 					printf("nil");
 			}
@@ -39,6 +39,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 	}
 	printf("\n");
-	va_end (str);
+	va_end(str);
 }
-
