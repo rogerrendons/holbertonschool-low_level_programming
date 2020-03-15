@@ -7,17 +7,20 @@
  * Return: int
  */
 
+
 void print_all(const char * const format, ...)
 {
 
 	va_list str;
 	char *val;
 	int index = 0;
+	int sw;
 
 	va_start(str, format);
 
 	while (format && format[index])
 	{
+		sw = 1;
 		switch (format[index])
 		{
 		case 'c':
@@ -38,8 +41,10 @@ void print_all(const char * const format, ...)
 			}
 			printf("%s", val);
 			break;
+		default:
+			sw = 0;
 		};
-		if (index > 0 && format[index + 1])
+		if (format[index + 1] && sw == 1)
 			printf(", ");
 		index++;
 	}
