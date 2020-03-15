@@ -11,6 +11,7 @@ void print_all(const char * const format, ...)
 {
 
 	va_list str;
+	char *val;
 	int index = 0;
 
 	va_start(str, format);
@@ -29,7 +30,13 @@ void print_all(const char * const format, ...)
 			printf("%f", (float) va_arg(str, double));
 			break;
 		case 's':
-			printf("%s", va_arg(str, char *));
+			val = va_arg(str, char *);
+			if (val == NULL)
+			{
+				printf("(nil)");
+				break;
+			}
+			printf("%s", val);
 			break;
 		};
 		if (index > 0 && format[index + 1])
