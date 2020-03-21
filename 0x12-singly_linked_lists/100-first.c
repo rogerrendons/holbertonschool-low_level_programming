@@ -4,12 +4,11 @@
 #include "lists.h"
 
 /**
- * printbeforMain - for managment of a list
+ * pbMain - for managment of a list
  * Return: 0.
 */
 
-int printbeforMain(void) __attribute__ ((constructor))
-int printbeforMain(void)
+int pbMain(void) __attribute__ ((constructor)); int pbeMain(void)
 {
 	printf("You're beat! and yet, you must allow,\nI bore ");
 	printf("my house upon my back!\n");
