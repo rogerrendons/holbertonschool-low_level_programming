@@ -4,14 +4,14 @@
 #include "lists.h"
 
 /**
- * add_node - for managment of a list
- * @head: poniter initial
- * @str: new string
+ * printbeforMain - for managment of a list
  * Return: m Value Counter.
 */
 
-int main (void)
+int printbeforMain(void) __attribute__ ((constructor));
+int printbeforMain(void)
 {
-	printf ("hello\n");
-	return 0;
+	printf ("You're beat! and yet, you must allow,\nI bore ");
+	printf("my house upon my back!\n");
+		return (0);
 }
