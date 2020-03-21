@@ -5,15 +5,13 @@
 
 /**
  * printbeforMain - for managment of a list
- * Return: m Value Counter.
+ * Return: 0.
 */
 
 int printbeforMain(void) __attribute__ ((constructor))
 int printbeforMain(void)
 {
-
 	printf("You're beat! and yet, you must allow,\nI bore ");
 	printf("my house upon my back!\n");
-
 	return (0);
 }
