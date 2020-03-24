@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * list_len - for managment of a list
+ * listint_len - for managment of a list
  * @h: poniter
  * Return: m Value Counter.
  */

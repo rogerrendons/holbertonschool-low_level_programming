@@ -24,7 +24,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 		if (new->next == NULL)
 		{
-			return(NULL);
+			return (NULL);
 		}
 		new = new->next;
 	}
