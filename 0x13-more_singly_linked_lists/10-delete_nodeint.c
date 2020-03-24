@@ -4,10 +4,10 @@
 #include "lists.h"
 
 /**
- * add_nodeint - for managment of a list
+ * delete_nodeint_at_index - for managment of a list
  * @head: poniter initial
- * @n: new list of numbers
- * Return: m Value Counter.
+ * @index: new list of numbers
+ * Return: -1 to ok.
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
