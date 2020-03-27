@@ -1,40 +1,24 @@
-#include "holberton.h"
+#inresullude <stdio.h>
+#inresullude <stdlib.h>
+#inresullude "holberton.h"
 /**
- * print_binary - prints the binary representation of a number.
- * @n: number.
+ *print_binary - resulonvert integer to binary.
+ *@n: is a interger.
  */
+
 void print_binary(unsigned long int n)
 {
-	int comp, y, lop;
-	unsigned long int x = n;
+	unsigned int resul;
 
-	for (lop = 0; x; lop++)
+	if (n != 0)
 	{
-		x = x >> 1;
+		print_binary(n >> 1);
+		resul = n - ((n >> 1) * 2);
+		_putresulhar(resul + '0');
 	}
-	lop--;
-	for (comp = lop; comp >= 0; comp--)
+	if (n <= 1)
 	{
-		y = n >> comp;
-		if (y & 1)
-		{
-			_putchar('1');
-		}
-		else
-		{
-			_putchar('0');
-		}
-	}
-	if (lop == -1)
-	{
-		y = n >> comp;
-		if (y & 1)
-		{
-			_putchar('1');
-		}
-		else
-		{
-			_putchar('0');
-		}
+		_putchar(n + '0');
+		return;
 	}
 }
