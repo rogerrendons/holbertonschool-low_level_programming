@@ -37,5 +37,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	close(ofile);
 	free(buffer);
-	return (numcar + 1);
+	return (numcar);
 }
