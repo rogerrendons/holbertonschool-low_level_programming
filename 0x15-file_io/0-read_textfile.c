@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * read_textfile - read a text form file.
- * @char: Name of file
+ * @filename: Name of file
  * @letters: From File
  * Return: Result.
  */
@@ -27,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	for (counter = 0; counter < numcar; counter++)
- 	{
+	{
 		if (write(STDOUT_FILENO, &buffer[counter], 1) == -1)
 		{
 			close(ofile);
