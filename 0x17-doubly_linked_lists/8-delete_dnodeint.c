@@ -29,15 +29,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 				BackNode->next = CopyHead->next;
 			else
 				*head = CopyHead->next;
-
 			free(CopyHead);
 			return (1);
 		}
-
 		BackNode = CopyHead;
 		CopyHead = CopyHead->next;
 		Cont++;
 	}
-
+	free (BackNode);
 	return (-1);
 }
