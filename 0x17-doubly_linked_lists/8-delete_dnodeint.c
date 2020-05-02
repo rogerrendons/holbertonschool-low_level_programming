@@ -36,6 +36,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		CopyHead = CopyHead->next;
 		Cont++;
 	}
-	free (BackNode);
+	free(BackNode);
 	return (-1);
 }
