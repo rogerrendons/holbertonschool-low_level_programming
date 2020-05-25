@@ -12,30 +12,34 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int Cont = 0;
-	dlistint_t *CopyHead;
-	dlistint_t *BackNode = NULL;
+	dlistint_t *fwr, *Aux;
+	unsigned int i;
 
-	if (!*head || !head)
-		return (-1);
-
-	CopyHead = *head;
-
-	while (CopyHead)
+	if (*head != NULL)
 	{
-		if (Cont == index)
+		fwr = *head;
+		for (i = 0; fwr != NULL; i++)
 		{
-			if (BackNode)
-				BackNode->next = CopyHead->next;
-			else
-				*head = CopyHead->next;
-			free(CopyHead);
-			return (1);
+			if (i == index)
+			{
+				Aux = fwr;
+				if (Aux->prev != NULL)
+				{
+					fwr = fwr->prev;
+					fwr->next = Aux->next;
+				}
+				else
+					*head = Aux->next;
+				if (Aux->next != NULL)
+				{
+					fwr = Aux->next;
+					fwr->prev = Aux->prev;
+				}
+				free(Aux);
+				return (1);
+			}
+			fwr = fwr->next;
 		}
-		BackNode = CopyHead;
-		CopyHead = CopyHead->next;
-		Cont++;
 	}
-	free(BackNode);
 	return (-1);
 }
