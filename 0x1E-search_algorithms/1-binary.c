@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Function 
+ * binary_search - Function
  * a value in a sorted array
  * @array: pointer to search in
  * @size: elements in array
@@ -37,7 +37,7 @@ int binary_search(int *array, size_t size, int value)
 		if (array[half] < value)
 			side2 = half + 1;
 		else
-            side1 = half - 1;
+			side1 = half - 1;
 	}
 	return (-1);
 }
