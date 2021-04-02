@@ -1,2 +1,1 @@
-Puto readme
-Se me olvida
+0x03-debugging
